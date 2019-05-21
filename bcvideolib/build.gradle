@@ -2,12 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.ganyang-eyespage'//this
 
-
 android {
   compileSdkVersion 28
 
   defaultConfig {
-    minSdkVersion 24
+    minSdkVersion 19
     targetSdkVersion 28
     versionCode 1
     versionName "1.0"
@@ -38,24 +37,16 @@ dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   testImplementation 'junit:junit:4.12'
 
-//  ---------------
-  //recyclerview
-//  api 'com.android.support:appcompat-v7:28.0.0'
-//  api 'com.android.support:recyclerview-v7:28.0.0'
-
+//  --------VideoSDK 需要的lib-------
   //priority-jobqueue
   api files('libs/android-priority-jobqueue-2.0.1.jar')
-//  api 'com.birbit:android-priority-jobqueue:2.0.1'
 
   //videocache
   api 'com.danikula:videocache:2.7.1'
 
-  //Glide
-  api 'com.github.bumptech.glide:glide:4.9.0'
-  annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-
   //fastjson
   api files('libs/fastjson-1.2.58.jar')
+
   //okhttp3
   api("com.squareup.okhttp3:okhttp:3.14.2")
 
